@@ -48,6 +48,7 @@ void train_dataset(Ptr<LBPHFaceRecognizer> &model,vector<Mat> &images, vector<in
 	closedir(dp);
 }
 
+
 void Face_Recognition(Ptr<LBPHFaceRecognizer> &model){
 	Point Pt1, Pt2,Pt3;
 	Mat face_roi,face_resized;
@@ -68,6 +69,7 @@ void Face_Recognition(Ptr<LBPHFaceRecognizer> &model){
 		cout << "fail to open camera" <<endl;
 		return ;
 	}
+	cap.set(CAP_PROP_FPS,30);
 	cout << "\n [INFO] Starting Face recognition" << endl;
 	while(1){
 		//Capture one frame
@@ -149,7 +151,8 @@ void clear_data(){
 
 void usage(){
 	cout<<"1. Added face"<<endl;
-	cout<<"2. FaceRecognition"<<endl;
-	cout<<"3. Clear dataset"<<endl;
+	cout<<"2. BF_FaceRecognition"<<endl;
+	cout<<"3. RM_FaceRegnition"<<endl;
+	cout<<"4. Clear dataset"<<endl;
 }
 

@@ -18,7 +18,6 @@ def dataset(argv):
 	usr_face_id = int(argv)
 	#Import face cascade
 	faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-	
 	#Initialize campera
 	cap = cv2.VideoCapture(CAM_INDEX)
 	
